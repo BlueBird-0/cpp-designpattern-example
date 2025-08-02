@@ -30,17 +30,3 @@ private:
 };
 
 unordered_map<string, shared_ptr<Tree>> TreeFactory::trees;
-
-int main() {
-    for (int i = 0; i < 5; ++i) {
-        string color;
-        cout << "나무 색 입력: ";
-        cin >> color;
-
-        auto tree = TreeFactory::getTree(color);
-        int x = rand() % 100;
-        int y = rand() % 100;
-        tree->install(x, y);
-    }
-    return 0;
-}

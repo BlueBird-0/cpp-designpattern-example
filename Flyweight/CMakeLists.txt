@@ -6,6 +6,7 @@ set(GTEST_INCLUDE_DIR "${GTEST_ROOT}/googletest/include")
 
 # 인클루드 디렉토리 추가
 include_directories(${GTEST_INCLUDE_DIR})
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR} )
 
 # 라이브러리 디렉토리 추가
 link_directories(${GTEST_LIB_DIR})
