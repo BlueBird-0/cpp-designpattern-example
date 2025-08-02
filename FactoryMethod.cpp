@@ -69,7 +69,7 @@ class Application {
     };
 
     int GetDocType(const char *pFileName) {
-        char *pExt = strrchr(pFileName, '.');
+        const char *pExt = strrchr(pFileName, '.');
         if (strcmp(pExt, ".hwp") == 0) {
             return HWP_DOCUMENT;
         } else if (strcmp(pExt, ".doc") == 0) {

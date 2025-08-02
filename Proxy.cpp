@@ -44,17 +44,7 @@ class NewFactory : public Factory {
                 return "C";
             }
         }
+
+        return "";
     }
 };
-
-// 여기서 Proxy는 NewFactory를 사용하여 FirstFactory를 사용하고 있습니다.
-int main(int argc, char* argv[]) {
-    MResultMatter resultMatter;
-    NewFactory newFactory;
-    string finalMatter = newFactory.process("A", resultMatter);
-    cout << "이름: " << resultMatter.name << endl;
-    cout << "무게: " << resultMatter.weight << endl;
-    cout << "최종 물질: " << finalMatter << endl;
-
-    return 0;
-}
