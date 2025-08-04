@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "mingw-debug",
+      "displayName": "MinGW GCC Debug",
+      "description": "Builds with MinGW GCC (Debug)",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "C:/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "C:/mingw64/bin/g++.exe",
+        "CMAKE_EXE_LINKER_FLAGS": "-static"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "mingw-debug-build",
+      "configurePreset": "mingw-debug",
+      "displayName": "Build with MinGW",
+      "description": "Build the project using the MinGW debug configuration"
+    }
+  ]
+}
