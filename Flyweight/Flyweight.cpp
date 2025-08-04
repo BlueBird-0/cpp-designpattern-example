@@ -29,4 +29,4 @@ private:
     static unordered_map<string, shared_ptr<Tree>> trees;
 };
 
-unordered_map<string, shared_ptr<Tree>> TreeFactory::trees;
+unordered_map<string, shared_ptr<Tree>> TreeFactory::trees;1
