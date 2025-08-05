@@ -1,3 +1,5 @@
+// Factory Method패턴은 객체를 생성하는 인터페이스는 정의하되, 인스턴스가 만들어지는건 서브클래스에 위임하는 패턴입니다.
+// 이 패턴은 객체 생성의 책임을 서브클래스에 넘겨, 클라이언트 코드가 구체적인 클래스에 의존하지 않도록 합니다.
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -40,6 +42,10 @@ class AnotherDocument : public Document {
     }
 };
 
+// Application 클래스는 Document 객체를 생성하는 인터페이스를 정의합니다.
+// CreateDocument 메서드는 서브클래스에서 구현되어야 하며, 각 문서 타입에 맞는 Document 객체를 생성합니다.
+#include <map>
+#include <string>
 class Application {
   public:
     virtual Document *CreateDocument(int docType) {
@@ -108,16 +114,3 @@ template <class T> class ConcreteApplication : public Application {
   public:
     Document *CreateDocument(int) override { return new T(); }
 };
-
-int main() {
-    HwpApplication hwpApp;
-    hwpApp.NewDocument("input.hwp");
-
-    AnotherApplication anotherApp;
-    anotherApp.NewDocument("input.doc");
-
-    ConcreteApplication<MsWordDocument> app;
-    app.NewDocument("input.doc");
-
-    cout << "Hello Factory Method Pattern" << endl;
-}
