@@ -36,14 +36,3 @@ void UseElectricDevice(Socket* socket) {
     cout << "⚡️ 전기 제품이 콘센트에 연결을 시도합니다...\n";
     socket->connect();
 }
-
-int main() {
-    KoreanPlug* myPlug = new KoreanPlug();
-    Socket* adapter = new PlugAdapter(myPlug);  // 어댑터를 통해 외국 콘센트에 연결
-
-    UseElectricDevice(adapter);
-
-    delete myPlug;
-    delete adapter;
-    return 0;
-}
