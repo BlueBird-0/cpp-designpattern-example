@@ -41,12 +41,3 @@ class Dog : public Animal {
         hunting_method->attack(); // 공격 메서드를 호출합니다.
     }
 };
-
-int main(int argc, char *argv[]) {
-    Cat cat(new Hunting_Method1());
-    cat.attack(); // 할퀴기!
-    Dog dog(new Hunting_Method2()); 
-    dog.attack(); // 물어뜯기!
-
-    return 0;
-}
