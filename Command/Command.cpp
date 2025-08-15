@@ -64,14 +64,3 @@ void registerCommand() {
     commandMap[KICK] = new KickCommand(new Leg());
     commandMap[WALK] = new WalkCommand(new Leg());
 }
-
-int main(int argc, char *argv[]) {
-    registerCommand();
-    
-    string input;
-    cin >> input;
-
-    Command* command = commandMap[input];// 명령어를 찾습니다.
-    command->execute();
-    return 0;
-}
