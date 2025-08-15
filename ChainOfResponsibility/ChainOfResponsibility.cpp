@@ -49,12 +49,3 @@ class InternetAnswer : public Answer {
         cout << answerMsg << endl;
     }
 }; 
-
-int main(int argc, char* argv[])
-{
-    SpecificDepartmentAnswer* specificDepartmentAnswer = new SpecificDepartmentAnswer("Specific Department");
-    InternetAnswer* internetAnswer = new InternetAnswer(specificDepartmentAnswer);
-
-    internetAnswer->handleAsk(); // 인터넷 부서에 질문을 합니다.
-    return 0;
-}
