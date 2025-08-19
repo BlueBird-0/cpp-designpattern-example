@@ -1,3 +1,4 @@
+//Mediator(중재자) 패턴이란 다수의 객체들이 직접 서로 참조하지 않고, Mediator라는 "중재자" 객체를 통해 상호작용하도록 만드는 패턴입니다.
 #include <gtest/gtest.h>
 #include <iostream>
 #include "Character.h"
